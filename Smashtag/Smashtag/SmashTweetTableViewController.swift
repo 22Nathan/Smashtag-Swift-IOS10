@@ -41,6 +41,8 @@ class SmashTweetTableViewController: TweetTableViewController
         }
     }
     
+    // MARK: - Navitation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Tweeters Mentioning Search Term"{
             if let tweetersTVC = segue.destination as? SmashTweetersTableViewController{
@@ -53,9 +55,13 @@ class SmashTweetTableViewController: TweetTableViewController
             if let navigationController = destinationViewController as? UINavigationController{
                 destinationViewController = navigationController.visibleViewController ?? destinationViewController
             }
-            if let mentionMVC = destinationViewController as? MentionTableViewController{
-                mentionMVC.navigationItem.leftBarButtonItem?.title = searchText!
-              //  mentionMVC.navigationItem.title = tweetCell.tweet?.user.description
+            if let indexPath = tableView.indexPath(for: sender as! UITableViewCell) {
+                let tweetForSegue: Twitter.Tweet = tweets[indexPath.section][indexPath.row]//获取sender的indexPath,然后获取segue的tweet
+                if let mentionMVC = destinationViewController as? MentionTableViewController{
+                    mentionMVC.navigationItem.leftBarButtonItem?.title = searchText!
+                    mentionMVC.navigationItem.title = tweetForSegue.user.description
+                    mentionMVC.tweet = tweetForSegue
+                }
             }
         }
     }

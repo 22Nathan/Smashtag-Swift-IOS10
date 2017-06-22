@@ -12,7 +12,7 @@ import Twitter
 class TweetTableViewController: UITableViewController,UITextFieldDelegate {
     // MARK: - Table view data source
 
-    private var tweets = [Array<Twitter.Tweet>](){
+    var tweets = [Array<Twitter.Tweet>](){
         didSet{
             print(tweets)
         }
@@ -105,7 +105,6 @@ class TweetTableViewController: UITableViewController,UITextFieldDelegate {
         // the textLabel and detailTextLabel are for non-Custom cells
 //        cell.textLabel?.text = tweet.text
 //        cell.detailTextLabel?.text = tweet.user.name
-
         if let tweetCell = cell as? TweetTableViewCell {
             tweetCell.tweet = tweet
         }

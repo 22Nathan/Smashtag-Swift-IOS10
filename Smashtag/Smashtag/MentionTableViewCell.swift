@@ -10,4 +10,12 @@ import UIKit
 import Twitter
 
 class MentionTableViewCell: UITableViewCell {
+    @IBOutlet weak var mentionLabel: UILabel!
+    
+    var tweetInfo : String = "" { didSet { updateUI() } }
+    
+    private func updateUI(){
+        mentionLabel.text = tweetInfo
+    }
+    
 }
