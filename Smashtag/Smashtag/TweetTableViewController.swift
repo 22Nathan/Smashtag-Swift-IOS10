@@ -20,6 +20,7 @@ class TweetTableViewController: UITableViewController,UITextFieldDelegate {
     
     public var searchText: String?{
         didSet{
+            RecentSearchModel().add(search: searchText!)
             searchTextField?.text = searchText
             searchTextField?.resignFirstResponder()
             lastTwitterRequest = nil

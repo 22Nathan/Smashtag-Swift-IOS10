@@ -82,10 +82,7 @@ class MentionTableViewController: UITableViewController {
         switch mention {
         case .Image(let url,_):
             let cell = tableView.dequeueReusableCell(withIdentifier: "Image Cell", for: indexPath) as! ImageTableViewCell
-                // FIXME: blocks main thread
-            if let imageData = try? Data(contentsOf: url) {
-                cell.tweetImageInfo = UIImage(data: imageData)
-            }
+                cell.urlInfo = url
             return cell
         case .Keyword(let keyword):
             let cell = tableView.dequeueReusableCell(withIdentifier: "Mention Cell", for: indexPath) as! MentionTableViewCell
@@ -101,6 +98,50 @@ class MentionTableViewController: UITableViewController {
             return tableView.bounds.size.width / CGFloat(ratio)
         default:
             return UITableViewAutomaticDimension
+        }
+    }
+    
+    // MARK - segue
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "Keyword"{
+            if let cell = sender as? MentionTableViewCell{
+                if let url = cell.mentionLabel.text{
+                    if url.hasPrefix("http"){
+//                        UIApplication.shared.open(URL(string: url)!)
+                        performSegue(withIdentifier: "Url", sender: sender)
+                        return false
+                    }
+                }
+            }
+        }
+        return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination
+        if let identifier = segue.identifier{
+            if identifier == "Keyword"{
+                if let tweetMVC = destinationViewController as? TweetTableViewController{
+                    if let cell = sender as? MentionTableViewCell{
+                        tweetMVC.searchText = cell.mentionLabel.text
+                    }
+                }
+            }
+            else if identifier == "Image"{
+                if let imageMVC = destinationViewController as? ImageViewController{
+                    if let cell = sender as? ImageTableViewCell{
+                        imageMVC.imageURL = cell.urlInfo
+                    }
+                }
+            }
+            else if identifier == "Url"{
+                if let webMVC = destinationViewController as? UrlViewController{
+                    if let cell = sender as? MentionTableViewCell{
+                        let url = URL(string:cell.tweetInfo)
+                        webMVC.webUrl = url
+                    }
+                }
+            }
         }
     }
 }

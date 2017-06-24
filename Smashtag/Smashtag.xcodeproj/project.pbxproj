@@ -17,6 +17,13 @@
 		538BA7221EF9620300B59C61 /* MentionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538BA7211EF9620300B59C61 /* MentionTableViewController.swift */; };
 		538BA7271EFA2C2600B59C61 /* MentionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538BA7261EFA2C2600B59C61 /* MentionTableViewCell.swift */; };
 		53B9F2A41EFBF20B00A96FD5 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9F2A31EFBF20B00A96FD5 /* ImageTableViewCell.swift */; };
+		53B9F2A61EFCBAC700A96FD5 /* UrlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9F2A51EFCBAC700A96FD5 /* UrlViewController.swift */; };
+		53B9F2A81EFD6C1800A96FD5 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9F2A71EFD6C1800A96FD5 /* ImageViewController.swift */; };
+		53B9F2AA1EFE4C2F00A96FD5 /* RecentSearchesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9F2A91EFE4C2F00A96FD5 /* RecentSearchesTableViewController.swift */; };
+		53B9F2AD1EFE4E6200A96FD5 /* MyTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9F2AC1EFE4E6200A96FD5 /* MyTabBarViewController.swift */; };
+		53B9F2B51EFE4FDB00A96FD5 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 53B9F2B41EFE4FDB00A96FD5 /* search.png */; };
+		53B9F2B71EFE4FEA00A96FD5 /* history.png in Resources */ = {isa = PBXBuildFile; fileRef = 53B9F2B61EFE4FEA00A96FD5 /* history.png */; };
+		53B9F2BB1EFE551A00A96FD5 /* RencentSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B9F2BA1EFE551A00A96FD5 /* RencentSearchModel.swift */; };
 		53D65C651EF4E7F200F6E5A2 /* Smash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 53D65C631EF4E7F200F6E5A2 /* Smash.xcdatamodeld */; };
 		53D65C671EF4EB2800F6E5A2 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D65C661EF4EB2800F6E5A2 /* Tweet.swift */; };
 		53D65C691EF4EB6D00F6E5A2 /* TwitterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53D65C681EF4EB6D00F6E5A2 /* TwitterUser.swift */; };
@@ -52,6 +59,13 @@
 		538BA7211EF9620300B59C61 /* MentionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionTableViewController.swift; sourceTree = "<group>"; };
 		538BA7261EFA2C2600B59C61 /* MentionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionTableViewCell.swift; sourceTree = "<group>"; };
 		53B9F2A31EFBF20B00A96FD5 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		53B9F2A51EFCBAC700A96FD5 /* UrlViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlViewController.swift; sourceTree = "<group>"; };
+		53B9F2A71EFD6C1800A96FD5 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		53B9F2A91EFE4C2F00A96FD5 /* RecentSearchesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentSearchesTableViewController.swift; sourceTree = "<group>"; };
+		53B9F2AC1EFE4E6200A96FD5 /* MyTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTabBarViewController.swift; sourceTree = "<group>"; };
+		53B9F2B41EFE4FDB00A96FD5 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
+		53B9F2B61EFE4FEA00A96FD5 /* history.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = history.png; sourceTree = "<group>"; };
+		53B9F2BA1EFE551A00A96FD5 /* RencentSearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RencentSearchModel.swift; sourceTree = "<group>"; };
 		53D65C641EF4E7F200F6E5A2 /* Smash.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Smash.xcdatamodel; sourceTree = "<group>"; };
 		53D65C661EF4EB2800F6E5A2 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		53D65C681EF4EB6D00F6E5A2 /* TwitterUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterUser.swift; sourceTree = "<group>"; };
@@ -94,7 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				530390A31EAB2DBE009E12EA /* Main.storyboard */,
+				53B9F2AC1EFE4E6200A96FD5 /* MyTabBarViewController.swift */,
 				530390AB1EAB2DBE009E12EA /* Info.plist */,
+				53B9F2AB1EFE4C3700A96FD5 /* recent */,
 				538BA7251EF9649200B59C61 /* mention */,
 				538BA7241EF9643000B59C61 /* smash */,
 				538BA7231EF9640900B59C61 /* coreData */,
@@ -106,6 +122,7 @@
 		530390B11EAB2DC7009E12EA /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				53B9F2B31EFE4FCA00A96FD5 /* icon */,
 				530390A61EAB2DBE009E12EA /* Assets.xcassets */,
 				5303909F1EAB2DBE009E12EA /* AppDelegate.swift */,
 				530390A81EAB2DBE009E12EA /* LaunchScreen.storyboard */,
@@ -147,11 +164,31 @@
 		538BA7251EF9649200B59C61 /* mention */ = {
 			isa = PBXGroup;
 			children = (
+				53B9F2A51EFCBAC700A96FD5 /* UrlViewController.swift */,
+				53B9F2A71EFD6C1800A96FD5 /* ImageViewController.swift */,
 				538BA7211EF9620300B59C61 /* MentionTableViewController.swift */,
 				53B9F2A31EFBF20B00A96FD5 /* ImageTableViewCell.swift */,
 				538BA7261EFA2C2600B59C61 /* MentionTableViewCell.swift */,
 			);
 			name = mention;
+			sourceTree = "<group>";
+		};
+		53B9F2AB1EFE4C3700A96FD5 /* recent */ = {
+			isa = PBXGroup;
+			children = (
+				53B9F2A91EFE4C2F00A96FD5 /* RecentSearchesTableViewController.swift */,
+				53B9F2BA1EFE551A00A96FD5 /* RencentSearchModel.swift */,
+			);
+			name = recent;
+			sourceTree = "<group>";
+		};
+		53B9F2B31EFE4FCA00A96FD5 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				53B9F2B61EFE4FEA00A96FD5 /* history.png */,
+				53B9F2B41EFE4FDB00A96FD5 /* search.png */,
+			);
+			name = icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				530390AA1EAB2DBE009E12EA /* LaunchScreen.storyboard in Resources */,
+				53B9F2B51EFE4FDB00A96FD5 /* search.png in Resources */,
 				530390A71EAB2DBE009E12EA /* Assets.xcassets in Resources */,
 				530390A51EAB2DBE009E12EA /* Main.storyboard in Resources */,
+				53B9F2B71EFE4FEA00A96FD5 /* history.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,17 +268,22 @@
 			files = (
 				53D65C6B1EF4EDD500F6E5A2 /* SmashTweetTableViewController.swift in Sources */,
 				53D65C6F1EF50D9D00F6E5A2 /* FetchedResultsTableViewController.swift in Sources */,
+				53B9F2A61EFCBAC700A96FD5 /* UrlViewController.swift in Sources */,
 				53D65C711EF50E8000F6E5A2 /* UITableViewDataSource+NSFetchedResultsController.swift in Sources */,
 				530390A01EAB2DBE009E12EA /* AppDelegate.swift in Sources */,
 				538BA7221EF9620300B59C61 /* MentionTableViewController.swift in Sources */,
 				53D65C671EF4EB2800F6E5A2 /* Tweet.swift in Sources */,
+				53B9F2A81EFD6C1800A96FD5 /* ImageViewController.swift in Sources */,
+				53B9F2AA1EFE4C2F00A96FD5 /* RecentSearchesTableViewController.swift in Sources */,
 				538BA7271EFA2C2600B59C61 /* MentionTableViewCell.swift in Sources */,
 				53D65C691EF4EB6D00F6E5A2 /* TwitterUser.swift in Sources */,
 				53B9F2A41EFBF20B00A96FD5 /* ImageTableViewCell.swift in Sources */,
 				530390B31EAB2E4D009E12EA /* TweetTableViewController.swift in Sources */,
 				53D65C651EF4E7F200F6E5A2 /* Smash.xcdatamodeld in Sources */,
 				530390F71EABC66B009E12EA /* TweetTableViewCell.swift in Sources */,
+				53B9F2BB1EFE551A00A96FD5 /* RencentSearchModel.swift in Sources */,
 				53D65C6D1EF508E400F6E5A2 /* SmashTweetersTableViewController.swift in Sources */,
+				53B9F2AD1EFE4E6200A96FD5 /* MyTabBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

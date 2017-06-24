@@ -11,10 +11,27 @@ import UIKit
 class ImageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var tweetImage: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
-    var tweetImageInfo: UIImage? = nil { didSet{ updateUI() } }
+    var urlInfo: URL? = nil {
+        didSet{
+            updateUI()
+        }
+    }
     
     private func updateUI(){
-        tweetImage.image = tweetImageInfo
+        if let url = urlInfo{
+            spinner.startAnimating()
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                let urlContents = try? Data(contentsOf: url)
+                if let imageData = urlContents, url == self?.urlInfo{
+                    DispatchQueue.main.async {
+                        self?.tweetImage.image = UIImage(data: imageData)
+                        self?.spinner.stopAnimating()
+                    }
+                }
+            }
+        }
+        
     }
 }
